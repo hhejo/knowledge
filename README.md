@@ -193,7 +193,7 @@ React는 선언적 (Declarative Approach)
 
 
 
-```react
+```javascript
 // index.js
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -208,7 +208,7 @@ root.render(
 );
 ```
 
-```react
+```javascript
 // App.js
 import React from "react"; // 없어도 상관 없음 (없어도 자동으로 변환)
 
@@ -233,7 +233,7 @@ export default App;
 
 `props.children`을 사용해서 자식 엘리먼트를 출력에 그대로 전달 (wrapper로만 사용)
 
-```react
+```javascript
 import React from "react";
 import "./Card.css";
 
@@ -257,7 +257,7 @@ export default Card;
 
 옛날 버전 React
 
-```react
+```javascript
 /*
 return (
   <div>
@@ -285,7 +285,7 @@ return React.createElement('div', {},
 
 중괄호 안에 함수 전달
 
-```react
+```javascript
 const clickHandler = (event) => console.log(event.target.value);
 //
 <button onClick={clickHandler}></button>
@@ -295,7 +295,7 @@ const clickHandler = (event) => console.log(event.target.value);
 
 컴포넌트 -> 컴포넌트에도 전달 가능
 
-```react
+```javascript
 <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
 ```
 
@@ -307,7 +307,7 @@ const clickHandler = (event) => console.log(event.target.value);
 
 - 2개 리턴 (값, 값 변경 함수)
 
-```react
+```javascript
 import React, { useState } from "react";
 // ...
 const ExpenseItem = (props) => {
@@ -336,7 +336,7 @@ const ExpenseItem = (props) => {
 
 `useState`를 사용하지 않으면?
 
-```react
+```javascript
 import React, { useState } from "react";
 // ...
 const ExpenseItem = (props) => {
@@ -379,7 +379,7 @@ React의 렌더링 방식 때문 (JSX의 작동 방식).. 이래서 State를 사
 
 1. `useState`를 여러 번 쓰기
 
-   ```react
+   ```javascript
    // ExpenseForm.js
    import React, { useState } from "react";
    
@@ -445,7 +445,7 @@ React의 렌더링 방식 때문 (JSX의 작동 방식).. 이래서 State를 사
 
 2. `useState`를 한 번에 쓰기 (잘못된 방식, 올바른 방식 확인)
 
-   ```react
+   ```javascript
    // ExpenseForm.js
    import React, { useState } from "react";
    
@@ -527,7 +527,7 @@ React의 렌더링 방식 때문 (JSX의 작동 방식).. 이래서 State를 사
 
 ### Two way binding (양방향 바인딩)
 
-```react
+```javascript
 // ExpenseForm.js
 import React, { useState } from "react";
 
@@ -585,7 +585,7 @@ export default ExpenseForm;
 
 예시 (ExpenseForm -> NewExpense)
 
-```react
+```javascript
 // ExpenseForm.js
 import React, { useState } from "react";
 
@@ -647,7 +647,7 @@ const ExpenseForm = (props) => {
 export default ExpenseForm;
 ```
 
-```react
+```javascript
 // NewExpense.js
 import React from "react";
 
@@ -699,7 +699,7 @@ export default NewExpense;
 - React는 모든 목록을 체크해서 업데이트 -> 버그 발생할 수 있고, 성능 저하됨
 - `key`를 사용해서 해결 (map 메서드의 index를 줄 수도 있지만, 권장하지 않음)
 
-```react
+```javascript
 // ExpenseList.js
 import React from "react";
 
@@ -737,7 +737,7 @@ export default ExpensesList;
 
 잘못된 방법, 올바른 방법 구분하기
 
-```react
+```javascript
 // App.js
 import React, { useState } from "react";
 
@@ -780,7 +780,7 @@ export default App;
 - 조건을 만족할 때 렌더링할 JSX content를 `&&` 뒤에 배치
 - 아예 컴포넌트화하는 것을 추천
 
-```react
+```javascript
 // Expenses.js
 import React, { useState } from "react";
 
@@ -848,7 +848,7 @@ export default Expenses;
 
 ### 조건부 렌더링
 
-```react
+```javascript
 // NewExpense.js
 import React, { useState } from "react";
 
@@ -917,7 +917,7 @@ style을 태그에 주는 방법은 좋지 않음 (내용이 너무 길어짐)
 
 `npm install --save styled-components`
 
-```react
+```javascript
 // Button.js
 import styled from "styled-components";
 
@@ -962,7 +962,7 @@ media query 적용 가능
 
 ### CSS Modules
 
-```react
+```javascript
 // CourseInput.js
 import React, { useState } from "react";
 

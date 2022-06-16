@@ -2,6 +2,86 @@
 
 
 
+## Array
+
+### 1. Declaration
+
+```javascript
+const arr1 = new Array();
+const arr2 = [];
+```
+
+### 2. Length
+
+```javascript
+arr.length
+```
+
+### 3. Loop
+
+```javascript
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+/////////////////////////////////////////////////////////////////////
+for (let item of arr) {
+    console.log(item);
+}
+/////////////////////////////////////////////////////////////////////
+arr.forEach((item, index, array) => console.log(item, index, array));
+```
+
+### 4. Add, Delete, Copy
+
+```javascript
+arr.push(1);
+arr.pop();
+arr.unshift(); // 앞에 push
+arr.shift(); // 앞에 pop
+arr.splice(1); // 인덱스 1부터 전부 pop
+arr.splice(1, 2); // 인덱스 1부터 2개 pop
+arr.splice(1, 1, 'a', 'b'); // 인덱스 1부터 1개 pop, 이후 그 자리부터 'a', 'b' push
+arr = arr1.concat(arr2); // arr1에 arr2 붙임
+```
+
+### 5. Search
+
+```javascript
+arr.indexOf('a'); // 없으면 -1
+arr.includes('hi'); // 있는지 확인
+arr.lastIndexOf(); // 뒤에서부터 확인
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
 hoisting : var, function declaration
 
 callback function

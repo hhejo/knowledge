@@ -1016,15 +1016,25 @@ export default CourseInput;
 
 
 
+project
+
+input, label 작성... JSX에서 for를 쓸 수 없음 (js 예약어) -> htmlFor 사용
+
+너무 컴포넌트로 분해하지 말고 처음에는 일단 작성하고 -> 컴포넌트로 점점 나누고 정리하는 방법이 나을듯?
 
 
 
+사용자 정의 컴포넌트에 className을 주려면..
 
 
 
+`.trim()`
+
+`Math.random().toString()`
 
 
 
+모달 css 학습하기
 
 
 
